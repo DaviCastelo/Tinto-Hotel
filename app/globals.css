@@ -1,0 +1,181 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Paleta de Cores Tintto Lux para TINTTO Hotel */
+  --background: #F4EDE4; /* Bege Elegante - fundo sofisticado e clean */
+  --foreground: #1E1E1E; /* Preto Charcoal - tipografia moderna */
+  --card: #FFFFFF; /* Branco Puro - para contrastes e áreas de respiro */
+  --card-foreground: #1E1E1E; /* Preto Charcoal - texto em cards */
+  --popover: #FFFFFF; /* Branco Puro */
+  --popover-foreground: #1E1E1E; /* Preto Charcoal */
+  --primary: #5A0A16; /* Borgonha/Vinho Intenso - cor principal, sofisticada */
+  --primary-foreground: #F4EDE4; /* Bege Elegante - texto em botões principais */
+  --secondary: #7B2C35; /* Marsala - secundária, mais suave que o borgonha */
+  --secondary-foreground: #F4EDE4; /* Bege Elegante - texto em elementos secundários */
+  --muted: #7B2C35; /* Marsala - elementos suaves */
+  --muted-foreground: #1E1E1E; /* Preto Charcoal */
+  --accent: #C1A35F; /* Dourado Luxo - destaques premium */
+  --accent-foreground: #1E1E1E; /* Preto Charcoal - texto em destaques */
+  --destructive: #FF6B6B; /* Coral Suave - para erros e alertas */
+  --destructive-foreground: #FFFFFF; /* Branco Puro */
+  --border: #7B2C35; /* Marsala - bordas suaves */
+  --input: #FFFFFF; /* Branco Puro - inputs */
+  --ring: #5A0A16; /* Borgonha - anel de foco */
+  --chart-1: #5A0A16; /* Borgonha */
+  --chart-2: #7B2C35; /* Marsala */
+  --chart-3: #C1A35F; /* Dourado Luxo */
+  --chart-4: #F4EDE4; /* Bege Elegante */
+  --chart-5: #1E1E1E; /* Preto Charcoal */
+  --radius: 0.5rem;
+  --sidebar: #1E1E1E; /* Preto Charcoal - header/footer */
+  --sidebar-foreground: #F4EDE4; /* Bege Elegante */
+  --sidebar-primary: #5A0A16; /* Borgonha */
+  --sidebar-primary-foreground: #F4EDE4; /* Bege Elegante */
+  --sidebar-accent: #C1A35F; /* Dourado Luxo */
+  --sidebar-accent-foreground: #1E1E1E; /* Preto Charcoal */
+  --sidebar-border: #7B2C35; /* Marsala */
+  --sidebar-ring: #5A0A16; /* Borgonha */
+}
+
+.dark {
+  /* Modo escuro com paleta Tintto Lux adaptada */
+  --background: #1E1E1E; /* Preto Charcoal - fundo escuro elegante */
+  --foreground: #F4EDE4; /* Bege Elegante - texto claro */
+  --card: #2A2A2A; /* Charcoal mais claro para cards */
+  --card-foreground: #F4EDE4; /* Bege Elegante - texto em cards */
+  --popover: #2A2A2A; /* Charcoal mais claro */
+  --popover-foreground: #F4EDE4; /* Bege Elegante */
+  --primary: #C1A35F; /* Dourado Luxo - principal no modo escuro */
+  --primary-foreground: #1E1E1E; /* Preto Charcoal - texto em botões */
+  --secondary: #7B2C35; /* Marsala - secundário no modo escuro */
+  --secondary-foreground: #F4EDE4; /* Bege Elegante */
+  --muted: #3A3A3A; /* Charcoal suave */
+  --muted-foreground: #C1A35F; /* Dourado Luxo */
+  --accent: #5A0A16; /* Borgonha - destaques */
+  --accent-foreground: #F4EDE4; /* Bege Elegante - texto em destaques */
+  --destructive: #FF6B6B; /* Coral Suave - para erros */
+  --destructive-foreground: #1E1E1E; /* Preto Charcoal */
+  --border: #3A3A3A; /* Charcoal suave - bordas */
+  --input: #2A2A2A; /* Charcoal mais claro - inputs */
+  --ring: #C1A35F; /* Dourado Luxo - anel de foco */
+  --chart-1: #C1A35F; /* Dourado Luxo */
+  --chart-2: #5A0A16; /* Borgonha */
+  --chart-3: #7B2C35; /* Marsala */
+  --chart-4: #F4EDE4; /* Bege Elegante */
+  --chart-5: #1E1E1E; /* Preto Charcoal */
+  --sidebar: #1E1E1E; /* Preto Charcoal */
+  --sidebar-foreground: #F4EDE4; /* Bege Elegante */
+  --sidebar-primary: #C1A35F; /* Dourado Luxo */
+  --sidebar-primary-foreground: #1E1E1E; /* Preto Charcoal */
+  --sidebar-accent: #5A0A16; /* Borgonha */
+  --sidebar-accent-foreground: #F4EDE4; /* Bege Elegante */
+  --sidebar-border: #3A3A3A; /* Charcoal suave */
+  --sidebar-ring: #C1A35F; /* Dourado Luxo */
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  /* Classes utilitárias para a paleta Tintto Lux */
+  .bg-burgundy {
+    background-color: #5A0A16;
+  }
+  .text-burgundy {
+    color: #5A0A16;
+  }
+  .bg-marsala {
+    background-color: #7B2C35;
+  }
+  .text-marsala {
+    color: #7B2C35;
+  }
+  .bg-elegant-beige {
+    background-color: #F4EDE4;
+  }
+  .text-elegant-beige {
+    color: #F4EDE4;
+  }
+  .bg-luxury-gold {
+    background-color: #C1A35F;
+  }
+  .text-luxury-gold {
+    color: #C1A35F;
+  }
+  .bg-charcoal {
+    background-color: #1E1E1E;
+  }
+  .text-charcoal {
+    color: #1E1E1E;
+  }
+  .bg-coral-soft {
+    background-color: #FF6B6B;
+  }
+  .text-coral-soft {
+    color: #FF6B6B;
+  }
+  
+  /* Gradientes Tintto Lux */
+  .bg-wine-gradient {
+    background: linear-gradient(135deg, #5A0A16 0%, #7B2C35 100%);
+  }
+  .bg-luxury-gradient {
+    background: linear-gradient(135deg, #C1A35F 0%, #5A0A16 100%);
+  }
+  .bg-elegant-gradient {
+    background: linear-gradient(135deg, #F4EDE4 0%, #C1A35F 100%);
+  }
+  .bg-sophisticated-gradient {
+    background: linear-gradient(135deg, #1E1E1E 0%, #5A0A16 100%);
+  }
+}
