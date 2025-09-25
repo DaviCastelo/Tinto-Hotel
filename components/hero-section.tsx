@@ -9,10 +9,10 @@ export function HeroSection() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('/luxury-hotel-exterior-with-pool-and-beautiful-land.jpg')`,
+          backgroundImage: `url('/images/IMG_0366.jpg')`,
         }}
       >
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-sophisticated-gradient opacity-80" />
       </div>
 
       {/* Content */}
@@ -25,7 +25,7 @@ export function HeroSection() {
         </div>
         
         {/* Formulário de Reserva */}
-        <div className="max-w-5xl mx-auto">
+        <div className="w-full">
           <BookingForm />
         </div>
       </div>

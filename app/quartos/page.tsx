@@ -1,84 +1,12 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
 import Image from "next/image"
-import { Bed, Users, Star } from "lucide-react"
-
-const rooms = [
-  {
-    id: "standard-duplo",
-    name: "Standard Duplo",
-    description: "Nossos apartamentos são totalmente preparados para descanso e comodidade, todos equipados com ar condicionado individual, telefone com linha direta, cofre, frigobar, internet wi-fi e TV LCD com canais por assinatura.",
-    price: "R$ 240",
-    image: "/modern-hotel-room-with-double-bed.jpg",
-    capacity: "3 pessoas",
-    size: "25m²",
-    beds: "1 cama de casal",
-    bathrooms: 1,
-    hasSuite: false,
-    amenities: [
-      "Ar Condicionado",
-      "Cofre", 
-      "Internet Wireless",
-      "Mini-Bar",
-      "Telefone com linha direta",
-      "TV LCD com canais por assinatura"
-    ],
-    rating: 4.5,
-    reviews: 89,
-    reservationUrl: "https://book.omnibees.com/hotel/1393/room/33108?c=1159&q=1393",
-  },
-  {
-    id: "standard-triplo", 
-    name: "Standard Triplo",
-    description: "Nossos apartamentos são totalmente preparados para descanso e comodidade, todos equipados com ar condicionado individual, telefone com linha direta, cofre, frigobar, internet wi-fi e TV LCD com canais por assinatura.",
-    price: "R$ 300",
-    image: "/deluxe-hotel-room-with-double-bed-and-single-bed.jpg",
-    capacity: "3 pessoas",
-    size: "30m²", 
-    beds: "1 cama de casal + 1 solteiro",
-    bathrooms: 1,
-    hasSuite: false,
-    amenities: [
-      "Ar Condicionado",
-      "Cofre",
-      "Internet Wireless", 
-      "Mini-Bar",
-      "Telefone com linha direta",
-      "TV LCD com canais por assinatura"
-    ],
-    rating: 4.6,
-    reviews: 112,
-    reservationUrl: "https://book.omnibees.com/hotel/1393/room/33109?c=1159&q=1393",
-  },
-  {
-    id: "standard-quadruplo",
-    name: "Standard Quadruplo", 
-    description: "Nossos apartamentos são totalmente preparados para descanso e comodidade, todos equipados com ar condicionado individual, telefone com linha direta, cofre, frigobar, internet wi-fi e TV LCD com canais por assinatura.",
-    price: "R$ 294,40",
-    image: "/family-hotel-room-with-multiple-beds.jpg",
-    capacity: "4 pessoas",
-    size: "35m²",
-    beds: "2 camas de casal",
-    bathrooms: 1,
-    hasSuite: false,
-    amenities: [
-      "Ar Condicionado",
-      "Cofre",
-      "Internet Wireless",
-      "Banheiro privado",
-      "Telefone",
-      "Apartamento para não Fumantes",
-      "Mini-Bar",
-      "TV LCD com canais por assinatura"
-    ],
-    rating: 4.7,
-    reviews: 156,
-    reservationUrl: "https://book.omnibees.com/hotel/1393/room/62316?c=9354&q=1393&NRooms=1&CheckIn=12032026&CheckOut=13032026&ad=1&ch=0&lang=pt-BR&currencyId=16&version=4",
-  }
-]
+import { Bed, Users, Star, Bath, Sofa } from "lucide-react"
+import { rooms } from "@/lib/rooms-data"
 
 export default function QuartosPage() {
   return (
@@ -101,9 +29,17 @@ export default function QuartosPage() {
       {/* Rooms Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-sienna mb-4">Nossos Quartos</h2>
+            <p className="text-dark-gray text-lg max-w-2xl mx-auto">
+              Escolha o quarto perfeito para sua estadia. Todos os nossos quartos oferecem conforto, elegância e todas as
+              comodidades necessárias.
+            </p>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {rooms.map((room) => (
-              <Card key={room.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+              <Card key={room.id} className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 border-2 border-tan/30">
                 <div className="relative">
                   <Image
                     src={room.image || "/placeholder.svg"}
@@ -112,57 +48,51 @@ export default function QuartosPage() {
                     height={300}
                     className="w-full h-64 object-cover"
                   />
-                  <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 text-sm font-semibold text-black">
-                    {room.price}/noite
-                  </div>
+                  <Badge className="absolute top-4 right-4 bg-peru text-white shadow-lg">
+                    {room.originalPrice && (
+                      <span className="line-through text-sm mr-2">{room.originalPrice}</span>
+                    )}
+                    A partir de {room.price}
+                  </Badge>
                 </div>
 
-                <CardContent className="p-6">
-                  <div className="flex items-center justify-between mb-2">
-                    <h3 className="text-xl font-bold text-black">{room.name}</h3>
-                    <div className="flex items-center gap-1">
-                      <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                      <span className="text-sm font-medium">{room.rating}</span>
-                      <span className="text-sm text-black">({room.reviews})</span>
-                    </div>
-                  </div>
+                <CardHeader className="bg-gradient-to-r from-soft-beige to-white">
+                  <CardTitle className="text-sienna">{room.name}</CardTitle>
+                </CardHeader>
 
-                  <p className="text-black mb-4 text-sm leading-relaxed">{room.description}</p>
-
-                  <div className="flex items-center gap-4 mb-4 text-sm text-black">
-                    <div className="flex items-center gap-1">
-                      <Users className="w-4 h-4" />
-                      <span>{room.capacity}</span>
+                <CardContent className="bg-white">
+                  <div className="space-y-3">
+                    <div className="flex items-center space-x-2 text-dark-gray">
+                      <Users size={18} className="text-peru" />
+                      <span>Até {room.capacity}</span>
                     </div>
-                    <div className="flex items-center gap-1">
-                      <Bed className="w-4 h-4" />
+                    <div className="flex items-center space-x-2 text-dark-gray">
+                      <Bed size={18} className="text-peru" />
                       <span>{room.beds}</span>
                     </div>
-                  </div>
-
-                  <div className="mb-6">
-                    <h4 className="font-semibold mb-2 text-sm">Comodidades:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {room.amenities.slice(0, 3).map((amenity, index) => (
-                        <span key={index} className="bg-muted text-black px-2 py-1 rounded-full text-xs">
-                          {amenity}
-                        </span>
-                      ))}
-                      {room.amenities.length > 3 && (
-                        <span className="text-xs text-black">+{room.amenities.length - 3} mais</span>
-                      )}
+                    <div className="flex items-center space-x-2 text-dark-gray">
+                      <Bath size={18} className="text-peru" />
+                      <span>
+                        {room.bathrooms} banheiro{room.bathrooms > 1 ? "s" : ""}
+                      </span>
                     </div>
-                  </div>
-
-                  <div className="flex gap-2">
-                    <Button asChild className="flex-1">
-                      <Link href={`/quartos/${room.id}`}>Ver Detalhes</Link>
-                    </Button>
-                    <Button asChild variant="outline" className="flex-1 bg-transparent">
-                      <Link href={room.reservationUrl} target="_blank" rel="noopener noreferrer">Reservar</Link>
-                    </Button>
+                    {room.hasSuite && (
+                      <div className="flex items-center space-x-2 text-dark-gray">
+                        <Sofa size={18} className="text-peru" />
+                        <span>Sala de estar</span>
+                      </div>
+                    )}
                   </div>
                 </CardContent>
+
+                <CardFooter className="flex gap-2">
+                  <Button asChild className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground">
+                    <Link href={`/quartos/${room.id}`}>Saiba Mais</Link>
+                  </Button>
+                  <Button asChild variant="outline" className="flex-1 bg-transparent">
+                    <Link href={room.reservationUrl} target="_blank" rel="noopener noreferrer">Reservar</Link>
+                  </Button>
+                </CardFooter>
               </Card>
             ))}
           </div>

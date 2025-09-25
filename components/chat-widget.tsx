@@ -47,6 +47,7 @@ export function ChatWidget() {
       'suite': 'https://book.omnibees.com/hotel/16875/room/99196?c=9190&q=16875',
       'standard-triplo': 'https://book.omnibees.com/hotel/16875/room/102187?c=9190&q=16875',
       'standard-duplo': 'https://book.omnibees.com/hotel/16875/room/99010?c=9190&q=16875',
+      'standard-triplo-casal': 'https://book.omnibees.com/hotel/16875/room/99195?c=9190&q=16875',
       'vista-mar': 'https://book.omnibees.com/hotel/16875/room/99195?c=9190&q=16875'
     }
     
@@ -326,7 +327,7 @@ export function ChatWidget() {
                         >
                           <Building size={16} className="mr-2" />
                           <div className="text-left">
-                            <div className="font-semibold">Apartamento Standard Triplo</div>
+                            <div className="font-semibold">Standard Triplo Solteiro</div>
                             <div className="text-xs text-gray-600">R$ 426,40/noite • 4 pessoas • Cama de casal + Solteiro</div>
                           </div>
                         </Button>
@@ -342,8 +343,24 @@ export function ChatWidget() {
                         >
                           <Building size={16} className="mr-2" />
                           <div className="text-left">
-                            <div className="font-semibold">Apartamento Standard</div>
+                            <div className="font-semibold">Standard Duplo Casal</div>
                             <div className="text-xs text-gray-600">R$ 341,25/noite • 2 pessoas • Cama de casal ou 2 solteiros</div>
+                          </div>
+                        </Button>
+                        
+                        <Button
+                          variant={quotationData.roomType === 'standard-triplo-casal' ? "default" : "outline"}
+                          size="sm"
+                          onClick={() => {
+                            setQuotationData(prev => ({ ...prev, roomType: 'standard-triplo-casal' }))
+                            setQuotationStep('rooms')
+                          }}
+                          className="w-full justify-start h-10"
+                        >
+                          <Building size={16} className="mr-2" />
+                          <div className="text-left">
+                            <div className="font-semibold">Standard Triplo Casal</div>
+                            <div className="text-xs text-gray-600">R$ 380,00/noite • 3 pessoas • Cama de casal + Solteiro</div>
                           </div>
                         </Button>
                         
@@ -358,7 +375,7 @@ export function ChatWidget() {
                         >
                           <Building size={16} className="mr-2" />
                           <div className="text-left">
-                            <div className="font-semibold">Apartamento Vista Parcial Mar</div>
+                            <div className="font-semibold">Parcial Mar Duplo Solteiro (PNE)</div>
                             <div className="text-xs text-gray-600">R$ 426,40/noite • 2 pessoas • Vista Lateral Mar</div>
                           </div>
                         </Button>
@@ -450,9 +467,10 @@ export function ChatWidget() {
                             <span className="text-gray-600">Tipo de Quarto:</span>
                             <span className="font-semibold">
                               {quotationData.roomType === 'suite' && 'Suíte'}
-                              {quotationData.roomType === 'standard-triplo' && 'Apartamento Standard Triplo'}
-                              {quotationData.roomType === 'standard-duplo' && 'Apartamento Standard'}
-                              {quotationData.roomType === 'vista-mar' && 'Apartamento Vista Parcial Mar'}
+                              {quotationData.roomType === 'standard-triplo' && 'Standard Triplo Solteiro'}
+                              {quotationData.roomType === 'standard-duplo' && 'Standard Duplo Casal'}
+                              {quotationData.roomType === 'standard-triplo-casal' && 'Standard Triplo Casal'}
+                              {quotationData.roomType === 'vista-mar' && 'Parcial Mar Duplo Solteiro (PNE)'}
                             </span>
                           </div>
                           <div className="flex justify-between">

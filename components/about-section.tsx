@@ -2,24 +2,24 @@ import Image from "next/image"
 
 export function AboutSection() {
   return (
-    <section className="py-16 bg-card">
+    <section className="py-16 bg-soft-beige">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Image */}
           <div className="order-2 lg:order-1">
             <Image
-              src="/elegant-hotel-lobby-with-comfortable-seating.jpg"
+              src="/images/IMG_0157_jpg.jpg"
               alt="Interior do TINTTO Hotel"
               width={800}
               height={600}
-              className="rounded-lg shadow-lg w-full h-auto"
+              className="rounded-lg shadow-xl w-full h-auto border-4 border-peru/20"
             />
           </div>
 
           {/* Content */}
           <div className="order-1 lg:order-2">
-            <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">Sobre o TINTTO Hotel</h2>
-            <div className="space-y-4 text-black text-lg leading-relaxed">
+            <h2 className="text-3xl md:text-4xl font-bold text-sienna mb-6">Sobre o TINTTO Hotel</h2>
+            <div className="space-y-4 text-dark-gray text-lg leading-relaxed">
               <p>
                 O TINTTO Hotel oferece uma experiência única de hospitalidade, combinando conforto moderno com a
                 calorosa tradição brasileira.
