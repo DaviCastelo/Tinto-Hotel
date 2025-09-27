@@ -1,6 +1,7 @@
 "use client"
 
-import { useState } from "react"
+import { useState, lazy, Suspense } from "react"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { MessageCircle, X, Calendar, MapPin, Building, BookOpen, Send, ChevronLeft, ChevronRight, Maximize2, Minimize2 } from "lucide-react"
@@ -174,7 +175,13 @@ export function ChatWidget() {
           <Card className="bg-white shadow-2xl border-0 overflow-hidden h-full flex flex-col">
             {/* Header */}
             <div className="bg-primary text-primary-foreground px-4 py-4 flex items-center justify-between flex-shrink-0">
-              <h3 className="font-semibold text-lg">TINTTO HOTEL</h3>
+              <Image 
+                src="/images/Design sem nome (45).png" 
+                alt="TINTTO Hotel" 
+                width={120} 
+                height={40} 
+                className="h-8 w-auto" 
+              />
               <div className="flex items-center space-x-2">
                 <Button
                   variant="ghost"

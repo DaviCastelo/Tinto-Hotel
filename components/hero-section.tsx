@@ -1,10 +1,8 @@
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
-import { BookingForm } from "@/components/booking-form"
+import Image from "next/image"
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-[60vh] sm:min-h-[70vh] lg:h-screen flex items-center justify-center">
+    <section className="relative h-[60vh] md:min-h-screen flex flex-col">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -12,21 +10,22 @@ export function HeroSection() {
           backgroundImage: `url('/images/IMG_0366.jpg')`,
         }}
       >
-        <div className="absolute inset-0 bg-sophisticated-gradient opacity-80" />
+        {/* Overlay apenas no desktop */}
+        <div className="absolute inset-0 bg-white/60 backdrop-blur-sm hidden md:block" />
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 py-8 sm:py-12">
-        <div className="text-center text-white mb-6 sm:mb-8 lg:mb-12">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-3 sm:mb-4 lg:mb-6 text-balance">TINTTO HOTEL</h1>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-4 sm:mb-6 lg:mb-8 text-balance max-w-2xl mx-auto leading-relaxed">
-            Experimente o conforto e a hospitalidade em um ambiente único
-          </p>
-        </div>
-        
-        {/* Formulário de Reserva */}
-        <div className="w-full">
-          <BookingForm />
+      {/* Logo no centro da foto - apenas no desktop */}
+      <div className="absolute inset-0 z-10 hidden md:flex items-center justify-center">
+        <div className="text-center">
+          <Image 
+            src="/images/Design sem nome (45).png" 
+            alt="TINTTO Hotel" 
+            width={300} 
+            height={120} 
+            className="h-32 lg:h-40 xl:h-48 w-auto mx-auto" 
+            priority
+            quality={100}
+          />
         </div>
       </div>
     </section>

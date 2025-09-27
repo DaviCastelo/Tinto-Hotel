@@ -4,30 +4,30 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Paleta de Cores Tintto Hotel - Inspirada no site oficial */
-  --background: #F8F6F0; /* Bege Suave - fundo elegante e acolhedor */
-  --foreground: #2C2C2C; /* Cinza Escuro - tipografia moderna e legível */
+  /* Paleta de Cores Tintto Hotel - Baseada no site oficial */
+  --background: #FFFFFF; /* Branco Puro - fundo principal */
+  --foreground: #2C2C2C; /* Cinza Escuro - tipografia principal */
   --card: #FFFFFF; /* Branco Puro - para contrastes e áreas de respiro */
   --card-foreground: #2C2C2C; /* Cinza Escuro - texto em cards */
   --popover: #FFFFFF; /* Branco Puro */
   --popover-foreground: #2C2C2C; /* Cinza Escuro */
-  --primary: #8B4513; /* Marrom Sienna - cor principal do hotel, terrosa e sofisticada */
+  --primary: #8B4513; /* Marrom Sienna - cor principal do hotel */
   --primary-foreground: #FFFFFF; /* Branco - texto em botões principais */
-  --secondary: #A0522D; /* Sienna Claro - secundária, mais suave */
+  --secondary: #A0522D; /* Sienna Claro - secundária */
   --secondary-foreground: #FFFFFF; /* Branco - texto em elementos secundários */
-  --muted: #D2B48C; /* Tan - elementos suaves e neutros */
-  --muted-foreground: #2C2C2C; /* Cinza Escuro */
-  --accent: #CD853F; /* Peru - destaques premium, dourado terroso */
+  --muted: #F5F5F5; /* Cinza Muito Claro - elementos suaves */
+  --muted-foreground: #666666; /* Cinza Médio */
+  --accent: #CD853F; /* Peru - destaques */
   --accent-foreground: #FFFFFF; /* Branco - texto em destaques */
   --destructive: #DC143C; /* Crimson - para erros e alertas */
   --destructive-foreground: #FFFFFF; /* Branco Puro */
-  --border: #D2B48C; /* Tan - bordas suaves */
+  --border: #E5E5E5; /* Cinza Claro - bordas suaves */
   --input: #FFFFFF; /* Branco Puro - inputs */
   --ring: #8B4513; /* Marrom Sienna - anel de foco */
   --chart-1: #8B4513; /* Marrom Sienna */
   --chart-2: #A0522D; /* Sienna Claro */
   --chart-3: #CD853F; /* Peru */
-  --chart-4: #F8F6F0; /* Bege Suave */
+  --chart-4: #FFFFFF; /* Branco */
   --chart-5: #2C2C2C; /* Cinza Escuro */
   --radius: 0.5rem;
   --sidebar: #8B4513; /* Marrom Sienna - header/footer */
@@ -186,5 +186,21 @@
   }
   .bg-warm-gradient {
     background: linear-gradient(135deg, #D2B48C 0%, #CD853F 100%);
+  }
+  
+  /* Animação para logo aparecer de baixo para cima */
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out;
   }
 }

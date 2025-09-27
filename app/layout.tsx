@@ -4,7 +4,7 @@ import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
-import { ChatWidget } from "@/components/chat-widget"
+import { ChatWidgetSimple } from "@/components/chat-widget-simple"
 import "./globals.css"
 
 export const metadata: Metadata = {
@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
         <Suspense fallback={null}>{children}</Suspense>
-        <ChatWidget />
+        <ChatWidgetSimple />
         <Analytics />
       </body>
     </html>
