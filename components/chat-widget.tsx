@@ -52,6 +52,7 @@ export function ChatWidget() {
       'vista-mar': 'https://book.omnibees.com/hotel/16875/room/99195?c=9190&q=16875'
     }
     
+    // Se não há tipo de quarto selecionado, usar URL geral
     const baseUrl = quotationData.roomType && roomUrls[quotationData.roomType as keyof typeof roomUrls] 
       ? roomUrls[quotationData.roomType as keyof typeof roomUrls]
       : "https://book.omnibees.com/hotel/16875?c=9190&q=16875"
@@ -117,7 +118,7 @@ export function ChatWidget() {
       setQuotationData(prev => ({ ...prev, checkIn: dateStr }))
     } else if (!quotationData.checkOut && dateStr > quotationData.checkIn) {
       setQuotationData(prev => ({ ...prev, checkOut: dateStr }))
-      setQuotationStep('rooms')
+      setQuotationStep('complete')
     }
   }
 
@@ -478,6 +479,7 @@ export function ChatWidget() {
                               {quotationData.roomType === 'standard-duplo' && 'Standard Duplo Casal'}
                               {quotationData.roomType === 'standard-triplo-casal' && 'Standard Triplo Casal'}
                               {quotationData.roomType === 'vista-mar' && 'Parcial Mar Duplo Solteiro (PNE)'}
+                              {!quotationData.roomType && 'Ver opções disponíveis'}
                             </span>
                           </div>
                           <div className="flex justify-between">
