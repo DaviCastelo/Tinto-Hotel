@@ -62,10 +62,10 @@ export function ServicesSection() {
                     src={service.bgImage}
                     alt={`${service.title} ${service.subtitle}`}
                     fill
-                    className="object-cover"
+                    className="object-cover brightness-125 contrast-90 group-hover:brightness-100 group-hover:contrast-100 transition-all duration-500"
                   />
-                  {/* Semi-transparent overlay like in first image */}
-                  <div className="absolute inset-0 bg-white/40 md:bg-black/30 group-hover:bg-white/30 md:group-hover:bg-black/20 transition-colors duration-300"></div>
+                  {/* White blur overlay for subtle effect */}
+                  <div className="absolute inset-0 bg-white/60 group-hover:bg-white/20 transition-colors duration-500"></div>
                 </div>
 
                  {/* Content */}
@@ -84,16 +84,16 @@ export function ServicesSection() {
                     />
                   </div>
 
-                  {/* Title and Subtitle - White text like first image */}
+                  {/* Title and Subtitle - Orange text like icons */}
                   <div className="mb-4">
-                    <h3 className="text-2xl md:text-2xl font-bold text-white mb-1 drop-shadow-lg">
+                    <h3 className="text-2xl md:text-2xl font-bold text-orange-400 group-hover:text-white mb-1 drop-shadow-lg transition-colors duration-300">
                       {service.title}
                     </h3>
-                    <h4 className="text-xl md:text-xl font-semibold text-white drop-shadow-lg">
+                    <h4 className="text-xl md:text-xl font-semibold text-orange-400 group-hover:text-white drop-shadow-lg transition-colors duration-300">
                       {service.subtitle}
                     </h4>
                     {service.description && (
-                      <p className="text-lg md:text-lg font-semibold text-white drop-shadow-lg mt-1">
+                      <p className="text-lg md:text-lg font-semibold text-orange-400 group-hover:text-white drop-shadow-lg mt-1 transition-colors duration-300">
                         {service.description}
                       </p>
                     )}

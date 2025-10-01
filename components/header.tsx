@@ -65,9 +65,6 @@ export function Header() {
             <Link href="/quartos" className="text-amber-800 hover:text-amber-700 transition-colors font-light uppercase text-base tracking-wide">
               Acomodações
             </Link>
-            <Link href="/pacotes" className="text-amber-800 hover:text-amber-700 transition-colors font-light uppercase text-base tracking-wide">
-              Pacotes
-            </Link>
             <Link href="#footer" className="text-amber-800 hover:text-amber-700 transition-colors font-light uppercase text-base tracking-wide">
               Contato
             </Link>
@@ -106,13 +103,6 @@ export function Header() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Acomodações
-              </Link>
-              <Link
-                href="/pacotes"
-                className="text-amber-800 hover:text-amber-700 transition-colors font-light uppercase text-base tracking-wide"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Pacotes
               </Link>
               <Link
                 href="#footer"
