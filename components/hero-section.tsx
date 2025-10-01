@@ -18,10 +18,10 @@ export function HeroSection() {
       <div className="absolute inset-0 z-10 hidden md:flex items-center justify-center">
         <div className="text-center">
           <Image 
-            src="/images/Design sem nome (45).png" 
+            src="/images/tintto-logo.webp" 
             alt="TINTTO Hotel" 
-            width={300} 
-            height={120} 
+            width={400} 
+            height={150} 
             className="h-32 lg:h-40 xl:h-48 w-auto mx-auto" 
             priority
             quality={100}

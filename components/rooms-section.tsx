@@ -80,64 +80,72 @@ export function RoomsSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {rooms.map((room) => (
-            <Card key={room.id} className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 border-2 border-tan/30">
-              <div className="relative">
-                <Image
-                  src={room.image || "/placeholder.svg"}
-                  alt={room.name}
-                  width={400}
-                  height={300}
-                  className="w-full h-64 object-cover"
-                />
-                <Badge className="absolute top-4 right-4 bg-peru text-white shadow-lg">
-                  {room.originalPrice && (
-                    <span className="line-through text-sm mr-2">{room.originalPrice}</span>
-                  )}
-                  A partir de {room.price}
-                </Badge>
-              </div>
-
-              <CardHeader className="bg-gradient-to-r from-soft-beige to-white">
-                <CardTitle className="text-sienna">{room.name}</CardTitle>
-              </CardHeader>
-
-              <CardContent className="bg-white">
-                <div className="space-y-3">
-                  <div className="flex items-center space-x-2 text-dark-gray">
-                    <Users size={18} className="text-peru" />
-                    <span>Até {room.capacity}</span>
-                  </div>
-                  <div className="flex items-center space-x-2 text-dark-gray">
-                    <Bed size={18} className="text-peru" />
-                    <span>{room.beds}</span>
-                  </div>
-                  <div className="flex items-center space-x-2 text-dark-gray">
-                    <Bath size={18} className="text-peru" />
-                    <span>
-                      {room.bathrooms} banheiro{room.bathrooms > 1 ? "s" : ""}
-                    </span>
-                  </div>
-                  {room.hasSuite && (
-                    <div className="flex items-center space-x-2 text-dark-gray">
-                      <Sofa size={18} className="text-peru" />
-                      <span>Sala de estar</span>
-                    </div>
-                  )}
+        <div className="space-y-16">
+          {rooms.map((room, index) => {
+            const isEven = index % 2 === 0;
+            return (
+              <div 
+                key={room.id} 
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-8 items-center animate-slide-in-${isEven ? 'left' : 'right'}`}
+              >
+                {/* Room Image */}
+                <div className={`relative ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
+                  <Image
+                    src={room.image || "/placeholder.svg"}
+                    alt={room.name}
+                    width={600}
+                    height={400}
+                    className="w-full h-96 object-cover rounded-lg"
+                  />
                 </div>
-              </CardContent>
 
-              <CardFooter className="flex gap-2">
-                <Button asChild className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground">
-                  <Link href={`/quartos/${room.id}`}>Saiba Mais</Link>
-                </Button>
-                <Button asChild variant="outline" className="flex-1 bg-transparent">
-                  <Link href={room.reservationUrl} target="_blank" rel="noopener noreferrer">Reservar</Link>
-                </Button>
-              </CardFooter>
-            </Card>
-          ))}
+                {/* Room Information */}
+                <div className={`space-y-6 ${isEven ? 'lg:order-2' : 'lg:order-1'}`}>
+                  <div>
+                    <h3 className="text-4xl font-bold text-dark-gray mb-2">{room.name.toUpperCase()}</h3>
+                    <div className="flex items-center space-x-2 text-dark-gray mb-4">
+                      <Users size={20} className="text-sienna" />
+                      <span className="text-lg">Até {room.capacity} pessoas</span>
+                    </div>
+                  </div>
+
+                  <div className="space-y-4">
+                    <p className="text-dark-gray text-lg leading-relaxed">
+                      Uma proposta de encantar e ser refúgio para quem busca comodidade, bem-estar e sofisticação em um ambiente aconchegante. Além de poder conhecer a terra do sol: Fortaleza.
+                    </p>
+                  </div>
+
+                  <div className="space-y-3">
+                    <div className="flex items-center space-x-3 text-dark-gray">
+                      <Bed size={20} className="text-sienna" />
+                      <span>{room.beds}</span>
+                    </div>
+                    <div className="flex items-center space-x-3 text-dark-gray">
+                      <Bath size={20} className="text-sienna" />
+                      <span>
+                        {room.bathrooms} banheiro{room.bathrooms > 1 ? "s" : ""}
+                      </span>
+                    </div>
+                    {room.hasSuite && (
+                      <div className="flex items-center space-x-3 text-dark-gray">
+                        <Sofa size={20} className="text-sienna" />
+                        <span>Sala de estar</span>
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="flex gap-4">
+                    <Button asChild className="bg-sienna hover:bg-sienna/90 text-white px-8 py-3 border border-sienna">
+                      <Link href={`/quartos/${room.id}`}>Saiba Mais</Link>
+                    </Button>
+                    <Button asChild variant="outline" className="bg-transparent text-sienna border-sienna hover:bg-sienna hover:text-white px-8 py-3">
+                      <Link href={room.reservationUrl} target="_blank" rel="noopener noreferrer">Reservar</Link>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

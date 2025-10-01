@@ -45,20 +45,26 @@ export function AdditionalServicesSection() {
                 key={index}
                 className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
               >
-                {/* Icon */}
-                <div className="flex items-center justify-center w-12 h-12 bg-sienna text-white rounded-lg mb-4">
-                  <IconComponent size={24} />
+                {/* Content with icon on the side */}
+                <div className="flex items-start space-x-4">
+                  {/* Icon */}
+                  <div className="flex-shrink-0">
+                    <IconComponent size={24} className="text-black" />
+                  </div>
+
+                  {/* Text content */}
+                  <div className="flex-1">
+                    {/* Title */}
+                    <h3 className="text-lg font-bold text-black mb-3">
+                      {service.title}
+                    </h3>
+
+                    {/* Description */}
+                    <p className="text-black text-sm leading-relaxed">
+                      {service.description}
+                    </p>
+                  </div>
                 </div>
-
-                {/* Title */}
-                <h3 className="text-lg font-bold text-dark-gray mb-3">
-                  {service.title}
-                </h3>
-
-                {/* Description */}
-                <p className="text-dark-gray text-sm leading-relaxed">
-                  {service.description}
-                </p>
               </div>
             )
           })}
