@@ -8,7 +8,7 @@ export function ServicesSection() {
       title: "TINTTO HOTEL",
       subtitle: "Recepção",
       description: "24 Horas",
-      bgImage: "/images/IMG_5233.jpg"
+      bgImage: "/images/IMG_0203.jpg"
     },
     {
       icon: Waves,
