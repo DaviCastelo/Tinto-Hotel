@@ -35,18 +35,16 @@ export default function SobrePage() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="relative w-full h-[60vh] md:h-[80vh] rounded-lg overflow-hidden">
-            <video
-              autoPlay
-              loop
-              playsInline
-              controls
-              muted
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/-mkX4TsG8KE?autoplay=1&loop=1&playlist=-mkX4TsG8KE&mute=1&controls=1&modestbranding=1&rel=0"
+              title="Vídeo do Hotel Tinto"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
               className="w-full h-full object-cover"
-              preload="metadata"
-            >
-              <source src="/Videos/IMG_9253.MP4" type="video/mp4" />
-              Seu navegador não suporta o elemento de vídeo.
-            </video>
+            />
           </div>
         </div>
       </section>
