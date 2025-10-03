@@ -40,7 +40,9 @@ export default function SobrePage() {
               loop
               playsInline
               controls
+              muted
               className="w-full h-full object-cover"
+              preload="metadata"
             >
               <source src="/Videos/IMG_9253.MP4" type="video/mp4" />
               Seu navegador não suporta o elemento de vídeo.
