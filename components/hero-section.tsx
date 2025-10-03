@@ -10,8 +10,8 @@ export function HeroSection() {
           backgroundImage: `url('/images/IMG_0366.jpg')`,
         }}
       >
-        {/* Overlay apenas no desktop */}
-        <div className="absolute inset-0 bg-white/60 backdrop-blur-sm hidden md:block" />
+        {/* Overlay apenas no desktop - efeito branco bem intenso sem desfoque */}
+        <div className="absolute inset-0 bg-white/60 hidden md:block" />
       </div>
 
       {/* Logo no centro da foto - apenas no desktop */}

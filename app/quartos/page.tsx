@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/componen
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
 import Image from "next/image"
-import { Bed, Users, Star, Bath, Sofa } from "lucide-react"
+import { Bed, Users, Star, Info } from "lucide-react"
 import { rooms } from "@/lib/rooms-data"
 
 export default function QuartosPage() {
@@ -17,25 +17,29 @@ export default function QuartosPage() {
       <div className="pt-20"></div>
 
       {/* Hero Section */}
-      <section className="bg-primary text-primary-foreground py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-balance">Nossos Quartos</h1>
-          <p className="text-xl md:text-2xl text-balance max-w-3xl mx-auto">
-            Escolha entre nossas acomodações cuidadosamente projetadas para proporcionar máximo conforto e hospitalidade
-          </p>
+      <section className="relative h-[40vh] md:h-[50vh] flex items-center justify-center">
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url('/IMG_5231.jpg')`,
+          }}
+        >
+          {/* Overlay apenas no desktop - efeito branco bem intenso sem desfoque */}
+          <div className="absolute inset-0 bg-white/60 hidden md:block" />
+        </div>
+
+        {/* Title centralizado */}
+        <div className="absolute inset-0 z-10 flex items-center justify-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold uppercase tracking-wider text-center" style={{ color: '#7d3330' }}>
+            Nossas Acomodações
+          </h1>
         </div>
       </section>
 
       {/* Rooms List */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-sienna mb-4">Nossos Quartos</h2>
-            <p className="text-dark-gray text-lg max-w-2xl mx-auto">
-              Escolha o quarto perfeito para sua estadia. Todos os nossos quartos oferecem conforto, elegância e todas as
-              comodidades necessárias.
-            </p>
-          </div>
 
           <div className="space-y-16">
             {rooms.map((room, index) => {
@@ -52,7 +56,7 @@ export default function QuartosPage() {
                       alt={room.name}
                       width={600}
                       height={400}
-                      className="w-full h-96 object-cover rounded-lg"
+                      className="w-full h-96 object-cover"
                     />
                   </div>
 
@@ -77,25 +81,16 @@ export default function QuartosPage() {
                         <Bed size={20} className="text-sienna" />
                         <span>{room.beds}</span>
                       </div>
-                      <div className="flex items-center space-x-3 text-dark-gray">
-                        <Bath size={20} className="text-sienna" />
-                        <span>
-                          {room.bathrooms} banheiro{room.bathrooms > 1 ? "s" : ""}
-                        </span>
-                      </div>
-                      {room.hasSuite && (
+                      {room.bedOptions && (
                         <div className="flex items-center space-x-3 text-dark-gray">
-                          <Sofa size={20} className="text-sienna" />
-                          <span>Sala de estar</span>
+                          <Info size={20} className="text-sienna" />
+                          <span className="text-sm">{room.bedOptions}</span>
                         </div>
                       )}
                     </div>
 
                     <div className="flex gap-4">
-                      <Button asChild className="bg-sienna hover:bg-sienna/90 text-white px-8 py-3 border border-sienna">
-                        <Link href={`/quartos/${room.id}`}>Saiba Mais</Link>
-                      </Button>
-                      <Button asChild variant="outline" className="bg-transparent text-sienna border-sienna hover:bg-sienna hover:text-white px-8 py-3">
+                      <Button asChild className="bg-transparent hover:bg-amber-50 text-amber-800 border border-amber-800 rounded-none px-8 py-3 font-medium uppercase text-base tracking-wide">
                         <Link href={room.reservationUrl} target="_blank" rel="noopener noreferrer">Reservar</Link>
                       </Button>
                     </div>

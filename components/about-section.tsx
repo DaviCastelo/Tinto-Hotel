@@ -21,7 +21,7 @@ export function AboutSection() {
             <h2 className="text-3xl md:text-4xl font-bold text-sienna mb-6">Sobre o TINTTO Hotel</h2>
             <div className="space-y-4 text-dark-gray text-lg leading-relaxed">
               <p>
-                O TINTTO Hotel oferece uma experiência única de hospitalidade, combinando conforto moderno com a
+                O Tintto Hotel oferece uma experiência única de hospitalidade, combinando conforto moderno com a
                 calorosa tradição brasileira.
               </p>
               <p>

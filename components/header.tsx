@@ -56,23 +56,23 @@ export function Header() {
 
           {/* Desktop Navigation - Center */}
           <nav className="hidden md:flex items-center space-x-10">
-            <Link href="/" className="text-amber-800 hover:text-amber-700 transition-colors font-light uppercase text-base tracking-wide">
+            <Link href="/" className="text-amber-800 hover:text-amber-700 transition-colors font-medium uppercase text-base tracking-wide">
               Home
             </Link>
-            <Link href="/sobre" className="text-amber-800 hover:text-amber-700 transition-colors font-light uppercase text-base tracking-wide">
+            <Link href="/sobre" className="text-amber-800 hover:text-amber-700 transition-colors font-medium uppercase text-base tracking-wide">
               O Hotel
             </Link>
-            <Link href="/quartos" className="text-amber-800 hover:text-amber-700 transition-colors font-light uppercase text-base tracking-wide">
+            <Link href="/quartos" className="text-amber-800 hover:text-amber-700 transition-colors font-medium uppercase text-base tracking-wide">
               Acomodações
             </Link>
-            <Link href="#footer" className="text-amber-800 hover:text-amber-700 transition-colors font-light uppercase text-base tracking-wide">
+            <Link href="#footer" className="text-amber-800 hover:text-amber-700 transition-colors font-medium uppercase text-base tracking-wide">
               Contato
             </Link>
           </nav>
 
           {/* Desktop Navigation - Right */}
           <div className="hidden md:flex items-center">
-            <Button asChild className="bg-transparent hover:bg-amber-50 text-amber-800 border border-amber-800 rounded-none px-8 py-3 font-light uppercase text-base tracking-wide">
+            <Button asChild className="bg-transparent hover:bg-amber-50 text-amber-800 border border-amber-800 rounded-none px-8 py-3 font-medium uppercase text-base tracking-wide">
               <Link href="/quartos">Reserve Já</Link>
             </Button>
           </div>
@@ -87,33 +87,33 @@ export function Header() {
         {isMenuOpen && (
           <nav className="md:hidden mt-6 pb-6 border-t border-gray-200">
             <div className="flex flex-col space-y-6 pt-6">
-              <Link href="/" className="text-amber-800 hover:text-amber-700 transition-colors font-light uppercase text-base tracking-wide" onClick={() => setIsMenuOpen(false)}>
+              <Link href="/" className="text-amber-800 hover:text-amber-700 transition-colors font-medium uppercase text-base tracking-wide" onClick={() => setIsMenuOpen(false)}>
                 Home
               </Link>
               <Link
                 href="/sobre"
-                className="text-amber-800 hover:text-amber-700 transition-colors font-light uppercase text-base tracking-wide"
+                className="text-amber-800 hover:text-amber-700 transition-colors font-medium uppercase text-base tracking-wide"
                 onClick={() => setIsMenuOpen(false)}
               >
                 O Hotel
               </Link>
               <Link
                 href="/quartos"
-                className="text-amber-800 hover:text-amber-700 transition-colors font-light uppercase text-base tracking-wide"
+                className="text-amber-800 hover:text-amber-700 transition-colors font-medium uppercase text-base tracking-wide"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Acomodações
               </Link>
               <Link
                 href="#footer"
-                className="text-amber-800 hover:text-amber-700 transition-colors font-light uppercase text-base tracking-wide"
+                className="text-amber-800 hover:text-amber-700 transition-colors font-medium uppercase text-base tracking-wide"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contato
               </Link>
               <Button
                 asChild
-                className="bg-transparent hover:bg-amber-50 text-amber-800 border border-amber-800 rounded-none w-fit px-6 py-3 font-light uppercase text-base tracking-wide"
+                className="bg-transparent hover:bg-amber-50 text-amber-800 border border-amber-800 rounded-none w-fit px-6 py-3 font-medium uppercase text-base tracking-wide"
               >
                 <Link href="/quartos" onClick={() => setIsMenuOpen(false)}>
                   Reserve Já

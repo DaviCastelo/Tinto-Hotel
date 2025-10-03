@@ -34,9 +34,12 @@ export function LocationSection() {
               <div className="p-4 bg-white rounded-lg shadow-sm border border-peru/20">
                 <h4 className="font-semibold text-sienna mb-2">Próximo às principais atrações:</h4>
                 <ul className="text-dark-gray space-y-1 text-sm">
-                  <li>• Praia de Iracema (2 min a pé)</li>
+                  <li>• Beira Mar (2 min a pé)</li>
+                  <li>• Ponte dos Ingleses (5 min a pé)</li>
                   <li>• Dragão do Mar (5 min a pé)</li>
                   <li>• Centro Cultural Dragão do Mar (5 min a pé)</li>
+                  <li>• Supermercado São Luiz (próximo)</li>
+                  <li>• Farmácia Drogasil (próximo)</li>
                   <li>• Mercado Central (10 min de carro)</li>
                   <li>• Aeroporto Internacional (15 min de carro)</li>
                 </ul>

@@ -309,18 +309,18 @@ export function ChatWidget() {
                       </p>
                       <div className="space-y-2 mb-3">
                         <Button
-                          variant={quotationData.roomType === 'suite' ? "default" : "outline"}
+                          variant={quotationData.roomType === 'standard-duplo' ? "default" : "outline"}
                           size="sm"
                           onClick={() => {
-                            setQuotationData(prev => ({ ...prev, roomType: 'suite' }))
+                            setQuotationData(prev => ({ ...prev, roomType: 'standard-duplo' }))
                             setQuotationStep('rooms')
                           }}
                           className="w-full justify-start h-10"
                         >
                           <Building size={16} className="mr-2" />
                           <div className="text-left">
-                            <div className="font-semibold">Suíte</div>
-                            <div className="text-xs text-gray-600">R$ 477,75/noite • 4 pessoas • Queen + Beliche</div>
+                            <div className="font-semibold">Standard Duplo</div>
+                            <div className="text-xs text-gray-600">R$ 341,25/noite • 2 pessoas • Cama de casal ou 2 solteiros</div>
                           </div>
                         </Button>
                         
@@ -335,56 +335,40 @@ export function ChatWidget() {
                         >
                           <Building size={16} className="mr-2" />
                           <div className="text-left">
-                            <div className="font-semibold">Standard Triplo Solteiro</div>
-                            <div className="text-xs text-gray-600">R$ 426,40/noite • 4 pessoas • Cama de casal + Solteiro</div>
+                            <div className="font-semibold">Standard Triplo</div>
+                            <div className="text-xs text-gray-600">R$ 426,40/noite • 3 pessoas • Cama de casal + Solteiro</div>
                           </div>
                         </Button>
                         
                         <Button
-                          variant={quotationData.roomType === 'standard-duplo' ? "default" : "outline"}
+                          variant={quotationData.roomType === 'vista-parcial-mar' ? "default" : "outline"}
                           size="sm"
                           onClick={() => {
-                            setQuotationData(prev => ({ ...prev, roomType: 'standard-duplo' }))
+                            setQuotationData(prev => ({ ...prev, roomType: 'vista-parcial-mar' }))
                             setQuotationStep('rooms')
                           }}
                           className="w-full justify-start h-10"
                         >
                           <Building size={16} className="mr-2" />
                           <div className="text-left">
-                            <div className="font-semibold">Standard Duplo Casal</div>
-                            <div className="text-xs text-gray-600">R$ 341,25/noite • 2 pessoas • Cama de casal ou 2 solteiros</div>
+                            <div className="font-semibold">Vista Parcial Mar</div>
+                            <div className="text-xs text-gray-600">R$ 426,40/noite • 2 pessoas • Cama de casal ou 2 solteiros</div>
                           </div>
                         </Button>
                         
                         <Button
-                          variant={quotationData.roomType === 'standard-triplo-casal' ? "default" : "outline"}
+                          variant={quotationData.roomType === 'suite' ? "default" : "outline"}
                           size="sm"
                           onClick={() => {
-                            setQuotationData(prev => ({ ...prev, roomType: 'standard-triplo-casal' }))
+                            setQuotationData(prev => ({ ...prev, roomType: 'suite' }))
                             setQuotationStep('rooms')
                           }}
                           className="w-full justify-start h-10"
                         >
                           <Building size={16} className="mr-2" />
                           <div className="text-left">
-                            <div className="font-semibold">Standard Triplo Casal</div>
-                            <div className="text-xs text-gray-600">R$ 380,00/noite • 3 pessoas • Cama de casal + Solteiro</div>
-                          </div>
-                        </Button>
-                        
-                        <Button
-                          variant={quotationData.roomType === 'vista-mar' ? "default" : "outline"}
-                          size="sm"
-                          onClick={() => {
-                            setQuotationData(prev => ({ ...prev, roomType: 'vista-mar' }))
-                            setQuotationStep('rooms')
-                          }}
-                          className="w-full justify-start h-10"
-                        >
-                          <Building size={16} className="mr-2" />
-                          <div className="text-left">
-                            <div className="font-semibold">Parcial Mar Duplo Solteiro (PNE)</div>
-                            <div className="text-xs text-gray-600">R$ 426,40/noite • 2 pessoas • Vista Lateral Mar</div>
+                            <div className="font-semibold">Suíte</div>
+                            <div className="text-xs text-gray-600">R$ 477,75/noite • 5 pessoas • Queen + Beliche</div>
                           </div>
                         </Button>
                       </div>

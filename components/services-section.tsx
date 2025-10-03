@@ -34,7 +34,7 @@ export function ServicesSection() {
   ]
 
   return (
-    <section className="py-16 bg-white">
+    <section className="pt-48 pb-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-sienna mb-4">
@@ -108,13 +108,6 @@ export function ServicesSection() {
         </div>
       </div>
 
-      {/* Additional Info */}
-      <div className="container mx-auto px-4 mt-12 text-center">
-        <div className="inline-flex items-center space-x-2 bg-sienna/10 text-sienna px-6 py-3 rounded-full">
-          <Heart size={20} />
-          <span className="font-medium">Todos os serviços inclusos na sua estadia</span>
-        </div>
-      </div>
     </section>
   )
 }
