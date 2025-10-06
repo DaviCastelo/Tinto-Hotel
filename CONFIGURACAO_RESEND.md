@@ -30,13 +30,13 @@ O sistema agora usa **Resend** - um serviço profissional de email transacional 
 4. Dê um nome: `Tintto Hotel`
 5. **Copie a API Key** gerada (começa com `re_`)
 
-### **Passo 3: Configurar Variáveis de Ambiente**
+### **Passo 3: API Key Configurada**
 
-Crie o arquivo `.env.local` na raiz do projeto:
+A API key do Resend já está configurada diretamente no código:
+- **Arquivo:** `app/api/send-email/route.ts`
+- **API Key:** `re_9ropkPix_64XuzcCLVmCcNfK3Y1ehKWPK`
 
-```env
-RESEND_API_KEY=re_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-```
+**✅ Pronto para usar!** Não é necessário configurar variáveis de ambiente.
 
 ### **Passo 4: Configurar Domínio (Opcional)**
 
@@ -61,13 +61,41 @@ Para usar `noreply@tinttohotel.com` em vez de `noreply@resend.dev`:
 
 ## 📧 **Estrutura do Email Enviado**
 
-**De:** `Tintto Hotel <noreply@tinttohotel.com>`  
+**De:** `Tintto Hotel <onboarding@resend.dev>`  
 **Para:** `comercial@tinttohotel.com.br`  
 **Assunto:** `Nova mensagem de contato - [Nome do usuário]`
 
 ### **Conteúdo:**
 - ✅ Informações do cliente (nome, email, telefone)
 - ✅ Status da newsletter (aceita/não aceita)
+
+## 🔧 **Troubleshooting - Problemas Comuns**
+
+### **❌ Email não está chegando:**
+
+1. **Verifique se a API key está no código:**
+   ```bash
+   # No terminal, verifique se a API key está no arquivo
+   grep "re_" app/api/send-email/route.ts
+   ```
+
+2. **Verifique os logs do servidor:**
+   - Abra o terminal onde o servidor está rodando
+   - Procure por mensagens de erro do Resend
+
+3. **Teste a API key no painel do Resend:**
+   - Acesse: https://resend.com/emails
+   - Verifique se há tentativas de envio listadas
+
+4. **Verifique a caixa de spam:**
+   - O email pode ter ido para a pasta de spam
+   - Procure por emails de `onboarding@resend.dev`
+
+### **✅ Soluções:**
+
+- **API key inválida:** Gere uma nova API key no painel do Resend
+- **Domínio não verificado:** Use `onboarding@resend.dev` (já configurado)
+- **Rate limit:** Aguarde alguns minutos entre tentativas
 - ✅ Mensagem completa
 - ✅ Data/hora de envio
 - ✅ IP do usuário

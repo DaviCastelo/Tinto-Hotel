@@ -34,8 +34,8 @@ export async function POST(request: NextRequest) {
     const resend = new Resend('re_9ropkPix_64XuzcCLVmCcNfK3Y1ehKWPK');
 
     // Envio do email usando Resend
-    await resend.emails.send({
-      from: 'Tintto Hotel <noreply@tinttohotel.com>',
+    const { data, error } = await resend.emails.send({
+      from: 'Tintto Hotel <onboarding@resend.dev>',
       to: ['comercial@tinttohotel.com.br'],
       subject: `Nova mensagem de contato - ${nome}`,
       html: `
@@ -79,8 +79,18 @@ ${mensagem}
       `,
     });
 
+    // Verificar se houve erro no envio
+    if (error) {
+      console.error('Erro do Resend:', error);
+      return NextResponse.json(
+        { error: 'Erro ao enviar email. Tente novamente mais tarde.' },
+        { status: 500 }
+      );
+    }
+
+    console.log('Email enviado com sucesso:', data);
     return NextResponse.json(
-      { message: 'Email enviado com sucesso!' },
+      { message: 'Email enviado com sucesso!', data },
       { status: 200 }
     );
 
