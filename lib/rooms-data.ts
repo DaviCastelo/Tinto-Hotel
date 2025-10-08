@@ -40,7 +40,7 @@ export const rooms = [
     beds: "Cama de casal + Solteiro",
     bathrooms: 1,
     hasSuite: false,
-    bedOptions: "Disponível como casal ou solteiro",
+    bedOptions: "2 opções: 3 camas de solteiro ou 1 cama de casal + 1 solteiro",
     amenities: [
       "Ar Condicionado",
       "Cofre",
