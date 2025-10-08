@@ -52,7 +52,7 @@ export default function SobrePage() {
       {/* Experiences Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-sienna text-center mb-16">
+          <h2 className="title-carppa title-carppa-h2 text-center mb-16">
             Experiências
           </h2>
           
@@ -60,7 +60,7 @@ export default function SobrePage() {
             {/* Café da Manhã Experience */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-4 order-2 lg:order-1">
-                <h3 className="text-2xl md:text-3xl font-bold text-sienna">
+                <h3 className="title-carppa title-carppa-h3">
                   Café da Manhã no Quarto
                 </h3>
                 <p className="text-dark-gray leading-relaxed">
@@ -88,7 +88,7 @@ export default function SobrePage() {
                 />
               </div>
               <div className="space-y-4">
-                <h3 className="text-2xl md:text-3xl font-bold text-sienna">
+                <h3 className="title-carppa title-carppa-h3">
                   Dia de Noiva
                 </h3>
                 <p className="text-dark-gray leading-relaxed">
@@ -100,7 +100,7 @@ export default function SobrePage() {
             {/* Lua de Mel Experience */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-4 order-2 lg:order-1">
-                <h3 className="text-2xl md:text-3xl font-bold text-sienna">
+                <h3 className="title-carppa title-carppa-h3">
                   Lua de Mel
                 </h3>
                 <p className="text-dark-gray leading-relaxed">
@@ -128,7 +128,7 @@ export default function SobrePage() {
                 />
               </div>
               <div className="space-y-4">
-                <h3 className="text-2xl md:text-3xl font-bold text-sienna">
+                <h3 className="title-carppa title-carppa-h3">
                   Sabores do Nordeste
                 </h3>
                 <p className="text-dark-gray leading-relaxed">

@@ -32,7 +32,7 @@ export default function QuartosPage() {
 
         {/* Title centralizado */}
         <div className="absolute inset-0 z-10 flex items-center justify-center">
-          <h1 className="title-carppa title-carppa-h1 uppercase tracking-wider text-center">
+          <h1 className="title-carppa title-carppa-h1 text-center">
             Nossas Acomodações
           </h1>
         </div>

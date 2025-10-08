@@ -18,7 +18,7 @@ export function AboutSection() {
 
           {/* Content */}
           <div className="order-1 lg:order-2">
-            <h2 className="text-3xl md:text-4xl font-bold text-sienna mb-6">Sobre o TINTTO Hotel</h2>
+            <h2 className="title-carppa title-carppa-h2 mb-6">Sobre o TINTTO Hotel</h2>
             <div className="space-y-4 text-dark-gray text-lg leading-relaxed">
               <p>
                 O Tintto Hotel oferece uma experiência única de hospitalidade, combinando conforto moderno com a
