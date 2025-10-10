@@ -11,7 +11,7 @@ export function useScrollAnimation(options: UseScrollAnimationOptions = {}) {
   const {
     threshold = 0.1,
     rootMargin = '0px 0px -50px 0px',
-    triggerOnce = false // IMPORTANTE: false para repetir sempre
+    triggerOnce = true // IMPORTANTE: true para animar apenas uma vez até o refresh
   } = options
 
   const [isVisible, setIsVisible] = useState(false)

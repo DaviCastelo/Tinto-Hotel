@@ -18,29 +18,19 @@ export default function QuartosPage() {
       <div className="pt-20"></div>
 
       {/* Hero Section */}
-      <section className="relative h-[40vh] md:h-[50vh] flex items-center justify-center">
+      <section className="relative h-[40vh] md:h-[50vh]">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: `url('/IMG_5231.jpg')`,
           }}
-        >
-          {/* Overlay apenas no desktop - efeito branco bem intenso sem desfoque */}
-          <div className="absolute inset-0 bg-white/60 hidden md:block" />
-        </div>
-
-        {/* Title centralizado */}
-        <div className="absolute inset-0 z-10 flex items-center justify-center">
-          <h1 className="title-carppa title-carppa-h1 text-center">
-            Nossas Acomodações
-          </h1>
-        </div>
+        />
       </section>
 
       {/* Rooms List */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
+        <div className="w-full">
 
           <div className="space-y-16">
             {rooms.map((room, index) => (

@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
@@ -8,39 +8,22 @@ import { Menu, X } from "lucide-react"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [showLogo, setShowLogo] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      // Mostrar logo quando o usuário rolar mais de 50% da altura da tela
-      const scrollPosition = window.scrollY
-      const windowHeight = window.innerHeight
-      setShowLogo(scrollPosition > windowHeight * 0.5)
-    }
-
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-lg">
       <div className="container mx-auto px-4 py-6">
         <div className="flex items-center justify-between">
           {/* Logo - Left (Desktop) */}
-          <div className="hidden md:flex items-center">
-            {showLogo ? (
-              <Link href="/" className="animate-slide-up">
-                <Image 
-                  src="/images/Design sem nome (45).png" 
-                  alt="TINTTO Hotel" 
-                  width={160} 
-                  height={60} 
-                  className="h-14 w-auto" 
-                />
-              </Link>
-            ) : (
-              <div className="w-40"></div>
-            )}
+          <div className="hidden md:flex items-center ml-28">
+            <Link href="/">
+              <Image 
+                src="/images/Design sem nome (45).png" 
+                alt="TINTTO Hotel" 
+                width={120} 
+                height={45} 
+                className="h-10 w-auto" 
+              />
+            </Link>
           </div>
 
           {/* Mobile Logo - Center */}
@@ -48,9 +31,9 @@ export function Header() {
             <Image 
               src="/images/Design sem nome (45).png" 
               alt="TINTTO Hotel" 
-              width={160} 
-              height={60} 
-              className="h-14 w-auto" 
+              width={120} 
+              height={45} 
+              className="h-10 w-auto" 
             />
           </div>
 

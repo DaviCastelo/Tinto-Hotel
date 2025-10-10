@@ -2,7 +2,7 @@
 
 ## 📋 Visão Geral
 
-Este sistema implementa animações baseadas em scroll que fazem elementos deslizarem de fora para dentro conforme o usuário desce a tela. O efeito **repete sempre** que o usuário chegar na seção.
+Este sistema implementa animações baseadas em scroll que fazem elementos deslizarem de fora para dentro conforme o usuário desce a tela. O efeito acontece **apenas uma vez** até o refresh da página.
 
 ## 🚀 Funcionalidades Implementadas
 
@@ -12,7 +12,7 @@ Este sistema implementa animações baseadas em scroll que fazem elementos desli
 - **Configurações**:
   - `threshold: 0.1` - Dispara quando 10% está visível
   - `rootMargin: '0px 0px -50px 0px'` - Timing otimizado
-  - `triggerOnce: false` - **IMPORTANTE**: Repete sempre
+  - `triggerOnce: true` - **IMPORTANTE**: Anima apenas uma vez até o refresh
 
 ### ✅ 2. Componente AnimatedRoomCard
 - **Arquivo**: `components/animated-room-card.tsx`
@@ -96,7 +96,7 @@ import { AnimatedSection } from "@/components/animated-section"
 ### Intersection Observer
 - **Threshold**: 0.1 (10% visível)
 - **Root Margin**: '0px 0px -50px 0px'
-- **Trigger Once**: false (repete sempre)
+- **Trigger Once**: true (anima apenas uma vez até o refresh)
 
 ### Animações CSS
 - **Duração**: 700ms
@@ -124,7 +124,7 @@ import { AnimatedSection } from "@/components/animated-section"
 
 ## 🎨 Resultado Visual
 
-- 🎯 **Efeito contínuo**: Anima sempre que chegar na seção
+- 🎯 **Efeito único**: Anima apenas uma vez até o refresh da página
 - 🎨 **Deslizamento lateral**: Pares da esquerda, ímpares da direita
 - ⚡ **Responsivo**: Funciona em mobile e desktop
 - 🎭 **Cascata**: Delays escalonados para efeito dinâmico

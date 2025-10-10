@@ -20,7 +20,7 @@ export function AnimatedSection({
   const { ref, isVisible } = useScrollAnimation({
     threshold,
     rootMargin: '0px 0px -50px 0px',
-    triggerOnce: false // Repetir sempre
+    triggerOnce: true // Anima apenas uma vez até o refresh
   })
 
   const getTransformClass = () => {

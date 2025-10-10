@@ -95,7 +95,7 @@ export const rooms = [
     image: "/Quartos/Suíte/Mais claras/IMG_0319.jpg",
     capacity: "5 pessoas",
     size: "24m²",
-    beds: "Queen + Beliche",
+    beds: "Queen + Triliche",
     bathrooms: 1,
     hasSuite: true,
     bedOptions: "Configuração fixa",
@@ -127,20 +127,7 @@ export const roomDetails = {
     originalPrice: "525,00",
     description: "Acomoda até 2 adultos + 1 criança cortesia (até 5 anos). Com aproximadamente 13 m², todos os apartamentos dessa categoria possuem vista para a cidade. O conforto está presente por meio de Smart TV, secador de cabelo, telefone com linha direta, cofre individual, frigobar, ar condicionado e internet wi-fi.",
     images: [
-      "/Quartos/Standard duplo casal/67.jpeg",
-      "/Quartos/Standard duplo casal/IMG_0196.jpg",
-      "/Quartos/Standard duplo casal/IMG_0198.jpg",
-      "/Quartos/Standard duplo casal/IMG_0200.jpg",
-      "/Quartos/Standard duplo casal/IMG_0201.jpg",
-      "/Quartos/Standard duplo casal/IMG_0202.jpg",
-      "/Quartos/Standard duplo casal/IMG_0204.jpg",
-      "/Quartos/Standard duplo casal/IMG_0206.jpg",
-      "/Quartos/Standard duplo casal/IMG_0211.jpg",
-      "/Quartos/Standard duplo casal/IMG_0212.jpg",
-      "/Quartos/Standard duplo casal/IMG_0214.jpg",
-      "/Quartos/Standard duplo casal/IMG_0215.jpg",
-      "/Quartos/Standard duplo casal/IMG_0217.jpg",
-      "/Quartos/Standard duplo casal/IMG_0219.jpg"
+      "/Quartos/Standard duplo casal/67.jpeg"
     ],
     amenities: [
       "Ar Condicionado",
@@ -167,13 +154,7 @@ export const roomDetails = {
     description: "Acomoda até 3 adultos + 1 criança cortesia (até 5 anos). Com aproximadamente 13 m², todos os apartamentos dessa categoria possuem vista para a cidade. O conforto está presente por meio de Smart TV, secador de cabelo, telefone com linha direta, cofre individual, frigobar, ar condicionado e internet wi-fi.",
     images: [
       "/Quartos/Standard triplo solteiro/62.jpg",
-      "/Quartos/Standard triplo solteiro/IMG_0222.jpg",
-      "/Quartos/Standard triplo solteiro/IMG_0224.jpg",
-      "/Quartos/Standard triplo solteiro/IMG_0227.jpg",
-      "/Quartos/Standard triplo solteiro/IMG_0231.jpg",
-      "/Quartos/Standard triplo solteiro/IMG_0232.jpg",
-      "/Quartos/Standard triplo solteiro/IMG_0234.jpg",
-      "/Quartos/Standard triplo solteiro/IMG_0237.jpg"
+      "/Quartos/Standard triplo casal/IMG_0250.jpg"
     ],
     amenities: [
       "Ar Condicionado",
@@ -199,22 +180,7 @@ export const roomDetails = {
     originalPrice: "656,00",
     description: "Acomoda até 2 adultos + 1 criança cortesia (até 5 anos). Com aproximadamente 12 m², todos os apartamentos dessa categoria possuem vista parcial do mar. O conforto está presente por meio de Smart TV, secador de cabelo, telefone com linha direta, cofre individual, frigobar, ar condicionado e internet wi-fi.",
     images: [
-      "/Quartos/Parcial mar duplo solteiro (PNE)/Claras/IMG_0154.jpg",
-      "/Quartos/Parcial mar duplo solteiro (PNE)/Claras/IMG_0155.jpg",
-      "/Quartos/Parcial mar duplo solteiro (PNE)/Claras/IMG_0159.JPG",
-      "/Quartos/Parcial mar duplo solteiro (PNE)/Claras/IMG_0160.jpg",
-      "/Quartos/Parcial mar duplo solteiro (PNE)/Claras/IMG_0162.jpg",
-      "/Quartos/Parcial mar duplo solteiro (PNE)/Claras/IMG_0163.jpg",
-      "/Quartos/Parcial mar duplo solteiro (PNE)/Claras/IMG_0164.jpg",
-      "/Quartos/Parcial mar duplo solteiro (PNE)/Claras/IMG_0167.jpg",
-      "/Quartos/Parcial mar duplo solteiro (PNE)/Claras/IMG_0170.jpg",
-      "/Quartos/Parcial mar duplo solteiro (PNE)/Claras/IMG_0171.jpg",
-      "/Quartos/Parcial mar duplo solteiro (PNE)/Claras/IMG_0177.jpg",
-      "/Quartos/Parcial mar duplo solteiro (PNE)/Claras/IMG_0184.jpg",
-      "/Quartos/Parcial mar duplo solteiro (PNE)/Claras/IMG_0185.jpg",
-      "/Quartos/Parcial mar duplo solteiro (PNE)/Claras/IMG_0189.jpg",
-      "/Quartos/Parcial mar duplo solteiro (PNE)/Claras/IMG_0192.jpg",
-      "/Quartos/Parcial mar duplo solteiro (PNE)/Claras/IMG_0194.jpg"
+      "/Quartos/Parcial mar duplo solteiro (PNE)/IMG_0160.jpg"
     ],
     amenities: [
       "Ar Condicionado",
@@ -233,33 +199,16 @@ export const roomDetails = {
   "suite": {
     name: "Suíte",
     capacity: 5,
-    beds: "Queen + Beliche",
+    beds: "Queen + Triliche",
     bathrooms: 1,
     hasSuite: true,
     price: "477,75",
     originalPrice: "735,00",
     description: "Com aproximadamente 24m², as suítes dispõem de espaço amplo, ideal para toda a família e ainda contam com vista parcial para o mar. O conforto está presente por meio de Smart TV, secador de cabelos, telefone com linha direta, cofre individual, frigobar, ar condicionado e internet wi-fi gratuita.",
     images: [
-      "/Quartos/Suíte/Mais claras/IMG_0319.jpg",
-      "/Quartos/Suíte/43.jpg",
-      "/Quartos/Suíte/44.jpg",
-      "/Quartos/Suíte/45.jpg",
-      "/Quartos/Suíte/53.jpg",
-      "/Quartos/Suíte/56.jpg",
-      "/Quartos/Suíte/57.jpg",
-      "/Quartos/Suíte/IMG_0305.jpg",
-      "/Quartos/Suíte/IMG_0308.jpg",
-      "/Quartos/Suíte/IMG_0311.jpg",
-      "/Quartos/Suíte/IMG_0318.jpg",
-      "/Quartos/Suíte/IMG_0321.jpg",
-      "/Quartos/Suíte/IMG_0327.jpg",
-      "/Quartos/Suíte/IMG_0328.jpg",
-      "/Quartos/Suíte/IMG_0332.jpg",
-      "/Quartos/Suíte/IMG_0334.jpg",
-      "/Quartos/Suíte/IMG_0340.jpg",
-      "/Quartos/Suíte/IMG_0341.jpg",
-      "/Quartos/Suíte/IMG_0342.jpg",
-      "/Quartos/Suíte/IMG_8531.jpg"
+      "/Quartos/IMG_0308.jpg",
+      "/Quartos/IMG_0341.jpg",
+      "/Quartos/IMG_0328.jpg"
     ],
     amenities: [
       "Ar Condicionado",

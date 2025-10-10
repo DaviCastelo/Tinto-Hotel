@@ -11,24 +11,14 @@ export default function SobrePage() {
       <div className="pt-20"></div>
       
       {/* Hero Section */}
-      <section className="relative h-[40vh] md:h-[50vh] flex items-center justify-center">
+      <section className="relative h-[40vh] md:h-[50vh]">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: `url('/images/IMG_0199.jpg')`,
           }}
-        >
-          {/* Overlay apenas no desktop - efeito branco bem intenso sem desfoque */}
-          <div className="absolute inset-0 bg-white/60 hidden md:block" />
-        </div>
-
-        {/* Title centralizado */}
-        <div className="absolute inset-0 z-10 flex items-center justify-center">
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-semibold uppercase tracking-wider" style={{ color: '#7d3330' }}>
-            O Hotel
-          </h1>
-        </div>
+        />
       </section>
 
       {/* Video Section */}
@@ -52,10 +42,6 @@ export default function SobrePage() {
       {/* Experiences Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="title-carppa title-carppa-h2 text-center mb-16">
-            Experiências
-          </h2>
-          
           <div className="space-y-20">
             {/* Café da Manhã Experience */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -129,10 +115,12 @@ export default function SobrePage() {
               </div>
               <div className="space-y-4">
                 <h3 className="title-carppa title-carppa-h3">
-                  Sabores do Nordeste
+                  Tintto Restaurante
                 </h3>
                 <p className="text-dark-gray leading-relaxed">
-                  A gastronomia nordestina possui sabores marcantes que encantam o Brasil inteiro e estes sabores estão presentes no nosso variado café da manhã, servido diariamente no Restaurante do Hotel. São temperos únicos, misturas inesperadas, pratos diversificados e novas interpretações da culinária que farão você se apaixonar.
+                O Tintto Restaurante celebra os sabores autênticos do
+                Nordeste com um toque contemporâneo. Nossas receitas valorizam ingredientes frescos e regionais  da carne de sol artesanal ao queijo coalho dourado, passando pelos temperos marcantes e pela hospitalidade nordestina que transforma cada refeição em uma experiência acolhedora.
+                Aberto todos os dias, das 12h00 às 22h00, o Tintto é o lugar ideal para desfrutar de um almoço cheio de sabor ou um jantar descontraído, em um ambiente moderno, elegante e cheio de personalidade.
                 </p>
               </div>
             </div>

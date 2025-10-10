@@ -36,14 +36,6 @@ export function ServicesSection() {
   return (
     <section className="pt-48 pb-16 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="title-carppa title-carppa-h2 mb-4">
-            Nossos Serviços
-          </h2>
-          <p className="text-lg text-dark-gray max-w-2xl mx-auto">
-            Oferecemos uma experiência completa com serviços de qualidade para tornar sua estadia inesquecível
-          </p>
-        </div>
       </div>
 
       {/* Full-width services section */}
