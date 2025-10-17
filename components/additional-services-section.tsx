@@ -9,7 +9,7 @@ export function AdditionalServicesSection() {
     },
     {
       icon: Utensils,
-      title: "O melhor da culinária regional no café da manhã",
+      title: "O melhor da culinária regional",
       description: "Experimente a gastronomia nordestina no Tintto Restaurante, com os melhores sabores da cidade. Aberto ao público (quarta a domingo das 12h às 22h)"
     },
     {
