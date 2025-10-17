@@ -40,7 +40,7 @@ export default function SobrePage() {
       </section>
 
       {/* Experiences Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 pb-80 bg-white">
         <div className="container mx-auto px-4">
           <div className="space-y-20">
             {/* Café da Manhã Experience */}
@@ -128,7 +128,8 @@ export default function SobrePage() {
         </div>
       </section>
 
-
+      {/* Extra spacing to prevent calendar overlap */}
+      <div className="h-64 bg-white"></div>
 
       <Footer />
     </main>

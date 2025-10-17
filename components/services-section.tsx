@@ -34,7 +34,7 @@ export function ServicesSection() {
   ]
 
   return (
-    <section className="pt-48 pb-16 bg-white">
+    <section className="pt-96 pb-16 bg-white">
       <div className="container mx-auto px-4">
       </div>
 
