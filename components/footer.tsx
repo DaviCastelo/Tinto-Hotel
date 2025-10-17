@@ -37,13 +37,20 @@ export function Footer() {
               <div className="pt-4">
                 <p className="text-sm text-gray-600 mb-2">Conheça também</p>
                 <div>
-                  <Image 
-                    src="https://tinttohotel.com.br/wp-content/themes/stamina/assets/img/carppa.png" 
-                    alt="Carppa Hotel" 
-                    width={100} 
-                    height={30} 
-                    className="h-8 w-auto" 
-                  />
+                  <Link 
+                    href="https://carppahotel.com.br" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:opacity-80 transition-opacity"
+                  >
+                    <Image 
+                      src="/images/carppa-logo-backup.png" 
+                      alt="Carppa Hotel" 
+                      width={200} 
+                      height={60} 
+                      className="h-12 w-auto" 
+                    />
+                  </Link>
                 </div>
               </div>
             </div>
