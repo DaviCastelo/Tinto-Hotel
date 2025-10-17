@@ -56,7 +56,7 @@ export function Header() {
           {/* Desktop Navigation - Right */}
           <div className="hidden md:flex items-center">
             <Button asChild className="bg-transparent hover:bg-amber-50 text-amber-800 border border-amber-800 rounded-none px-8 py-3 font-medium uppercase text-base tracking-wide">
-              <Link href="/quartos">Reserve Já</Link>
+              <Link href="https://book.omnibees.com/hotel/16875?c=9190&q=16875&NRooms=1&CheckIn=21092025&CheckOut=22092025&ad=1&ch=0&lang=pt-BR&currencyId=16&version=4" target="_blank" rel="noopener noreferrer">Reserve Já</Link>
             </Button>
           </div>
 
@@ -98,7 +98,7 @@ export function Header() {
                 asChild
                 className="bg-transparent hover:bg-amber-50 text-amber-800 border border-amber-800 rounded-none w-fit px-6 py-3 font-medium uppercase text-base tracking-wide"
               >
-                <Link href="/quartos" onClick={() => setIsMenuOpen(false)}>
+                <Link href="https://book.omnibees.com/hotel/16875?c=9190&q=16875&NRooms=1&CheckIn=21092025&CheckOut=22092025&ad=1&ch=0&lang=pt-BR&currencyId=16&version=4" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)}>
                   Reserve Já
                 </Link>
               </Button>
