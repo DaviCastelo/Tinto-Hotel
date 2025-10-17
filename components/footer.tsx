@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Instagram, Mail, Phone } from "lucide-react"
+import { Instagram, Mail, Phone, MessageCircle } from "lucide-react"
 import { ContactForm } from "./contact-form"
 
 export function Footer() {
@@ -60,11 +60,25 @@ export function Footer() {
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <Instagram size={20} className="text-sienna" />
-                  <span className="text-sienna">@tinttohotel</span>
+                  <Link 
+                    href="https://instagram.com/tinttohotel" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-sienna hover:text-amber-700 transition-colors cursor-pointer"
+                  >
+                    @tinttohotel
+                  </Link>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Phone size={20} className="text-sienna" />
-                  <span className="text-sienna">Central de Reservas: (85) 9 8149-3127</span>
+                  <MessageCircle size={20} className="text-sienna" />
+                  <Link 
+                    href="https://wa.me/5585981493127" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-sienna hover:text-amber-700 transition-colors cursor-pointer"
+                  >
+                    Central de Reservas WhatsApp:<br />(85) 98149-3127
+                  </Link>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone size={20} className="text-sienna" />
