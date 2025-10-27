@@ -4,6 +4,7 @@ import { Inter, Poppins, Playfair_Display } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import { ChatWidget } from "@/components/chat-widget"
+import Script from "next/script"
 import "./globals.css"
 
 // Configuração das fontes baseada no site oficial do Tintto Hotel
@@ -41,7 +42,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${inter.variable} ${poppins.variable} ${playfair.variable} font-sans`}>
+      <head>
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-16951667380"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-16951667380');
+          `}
+        </Script>
+      </head>
+      <body className={`${inter.variable} ${poppins.variable} ${playfair.variable} font-sans overflow-x-hidden`}>
         <Suspense fallback={null}>{children}</Suspense>
         <ChatWidget />
         <Analytics />

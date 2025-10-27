@@ -121,10 +121,32 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    max-width: 100%;
   }
+  
+  html {
+    overflow-x: hidden;
+    max-width: 100vw;
+    position: relative;
+  }
+  
   body {
     @apply bg-background text-foreground font-sans;
     font-family: var(--font-poppins), sans-serif;
+    overflow-x: hidden;
+    max-width: 100%;
+    position: relative;
+  }
+  
+  /* Garantir que containers e imagens respeitem o viewport */
+  img, video, svg {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Contêineres responsivos */
+  .container {
+    max-width: 100%;
   }
   
   /* Garantir que todos os elementos usem Poppins */
@@ -369,5 +391,16 @@
 
   .title-carppa-h4 {
     @apply text-xl md:text-2xl lg:text-3xl;
+  }
+  
+  /* Prevenir scroll horizontal */
+  main, section, article, aside {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+  
+  /* Garantir que elementos fixos não causem overflow */
+  header, footer {
+    max-width: 100vw;
   }
 }

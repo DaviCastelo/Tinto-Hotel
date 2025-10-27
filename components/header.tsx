@@ -10,9 +10,9 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-lg">
-      <div className="container mx-auto px-4 py-6">
-        <div className="flex items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-lg w-full max-w-full overflow-hidden">
+      <div className="container mx-auto px-4 py-6 max-w-full">
+        <div className="flex items-center justify-between w-full">
           {/* Logo - Left (Desktop) */}
           <div className="hidden md:flex items-center ml-28">
             <Link href="/">
