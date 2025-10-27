@@ -10,6 +10,21 @@ import Link from "next/link"
 export function ChatWidgetSimple() {
   const [isOpen, setIsOpen] = useState(false)
 
+  const handleWhatsAppClick = () => {
+    // Disparar evento de conversão do Google Ads
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'conversion', {
+        'send_to': 'AW-16951667380/QWGHCPHp87QbELTVl5M_',
+        'transaction_id': ''
+      });
+    }
+    // Abrir WhatsApp
+    const phoneNumber = "558581493127"
+    const message = "Olá! Gostaria de falar com o atendimento do TINTTO Hotel."
+    const encodedMessage = encodeURIComponent(message)
+    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank')
+  }
+
   const quickOptions = [
     {
       icon: Building,
@@ -28,12 +43,7 @@ export function ChatWidgetSimple() {
     {
       icon: MessageCircle,
       label: "WhatsApp",
-      action: () => {
-        const phoneNumber = "558581493127"
-        const message = "Olá! Gostaria de falar com o atendimento do TINTTO Hotel."
-        const encodedMessage = encodeURIComponent(message)
-        window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank')
-      }
+      action: handleWhatsAppClick
     }
   ]
 

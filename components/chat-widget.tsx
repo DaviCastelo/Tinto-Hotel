@@ -89,6 +89,18 @@ export function ChatWidget() {
     return `https://wa.me/${phoneNumber}?text=${encodedMessage}`
   }
 
+  const handleWhatsAppClick = () => {
+    // Disparar evento de conversão do Google Ads
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'conversion', {
+        'send_to': 'AW-16951667380/QWGHCPHp87QbELTVl5M_',
+        'transaction_id': ''
+      });
+    }
+    // Abrir WhatsApp
+    window.open(generateWhatsAppUrl(), '_blank');
+  }
+
   const formatDate = (dateString: string) => {
     const date = new Date(dateString)
     return date.toLocaleDateString('pt-BR', { 
@@ -571,7 +583,7 @@ export function ChatWidget() {
                         {supportMessage.trim() && (
                           <div className="space-y-2">
                             <Button
-                              onClick={() => window.open(generateWhatsAppUrl(), '_blank')}
+                              onClick={handleWhatsAppClick}
                               className="w-full bg-green-600 hover:bg-green-700 text-white"
                             >
                               <MessageCircle size={16} className="mr-2" />

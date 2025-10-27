@@ -1,7 +1,20 @@
+"use client"
+
 import Link from "next/link"
 import Image from "next/image"
 import { Instagram, Mail, Phone, MessageCircle } from "lucide-react"
 import { ContactForm } from "./contact-form"
+
+const handleWhatsAppClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  // Disparar evento de conversão do Google Ads
+  if (typeof window !== 'undefined' && (window as any).gtag) {
+    (window as any).gtag('event', 'conversion', {
+      'send_to': 'AW-16951667380/QWGHCPHp87QbELTVl5M_',
+      'transaction_id': ''
+    });
+  }
+  // Permitir que o link abra normalmente
+}
 
 export function Footer() {
   return (
@@ -82,6 +95,7 @@ export function Footer() {
                     href="https://wa.me/5585981493127" 
                     target="_blank" 
                     rel="noopener noreferrer"
+                    onClick={handleWhatsAppClick}
                     className="text-sienna hover:text-amber-700 transition-colors cursor-pointer"
                   >
                     Central de Reservas WhatsApp:<br />(85) 98149-3127
