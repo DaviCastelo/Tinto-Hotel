@@ -26,7 +26,7 @@ export const rooms = [
     ],
     rating: 4.4,
     reviews: 76,
-    reservationUrl: "https://book.omnibees.com/hotel/16875/room/99010?c=9190&q=16875&NRooms=1&CheckIn=21092025&CheckOut=22092025&ad=1&ch=0&lang=pt-BR&currencyId=16&version=4",
+    reservationUrl: "https://app.otabuilder.com/tinttohotel",
   },
   {
     id: "standard-triplo", 
@@ -55,7 +55,7 @@ export const rooms = [
     ],
     rating: 4.6,
     reviews: 98,
-    reservationUrl: "https://book.omnibees.com/hotel/16875/room/102187?c=9190&q=16875&NRooms=1&CheckIn=21092025&CheckOut=22092025&ad=1&ch=0&lang=pt-BR&currencyId=16&version=4",
+    reservationUrl: "https://app.otabuilder.com/tinttohotel",
   },
   {
     id: "vista-parcial-mar",
@@ -84,7 +84,7 @@ export const rooms = [
     ],
     rating: 4.7,
     reviews: 89,
-    reservationUrl: "https://book.omnibees.com/hotel/16875/room/99195?c=9190&q=16875&NRooms=1&CheckIn=21092025&CheckOut=22092025&ad=1&ch=0&lang=pt-BR&currencyId=16&version=4",
+    reservationUrl: "https://app.otabuilder.com/tinttohotel",
   },
   {
     id: "suite",
@@ -112,7 +112,7 @@ export const rooms = [
     ],
     rating: 4.8,
     reviews: 124,
-    reservationUrl: "https://book.omnibees.com/hotel/16875/room/99196?c=9190&q=16875&NRooms=1&CheckIn=21092025&CheckOut=22092025&ad=1&ch=0&lang=pt-BR&currencyId=16&version=4",
+    reservationUrl: "https://app.otabuilder.com/tinttohotel",
   }
 ]
 
@@ -141,7 +141,7 @@ export const roomDetails = {
       "Apartamento para não Fumantes",
       "Vista para a Cidade"
     ],
-    reservationUrl: "https://book.omnibees.com/hotel/16875/room/99010?c=9190&q=16875&NRooms=1&CheckIn=21092025&CheckOut=22092025&ad=1&ch=0&lang=pt-BR&currencyId=16&version=4",
+    reservationUrl: "https://app.otabuilder.com/tinttohotel",
   },
   "standard-triplo": {
     name: "Standard Triplo",
@@ -168,7 +168,7 @@ export const roomDetails = {
       "Apartamento para não Fumantes",
       "Vista para a Cidade"
     ],
-    reservationUrl: "https://book.omnibees.com/hotel/16875/room/102187?c=9190&q=16875&NRooms=1&CheckIn=21092025&CheckOut=22092025&ad=1&ch=0&lang=pt-BR&currencyId=16&version=4",
+    reservationUrl: "https://app.otabuilder.com/tinttohotel",
   },
   "vista-parcial-mar": {
     name: "Vista Parcial Mar",
@@ -194,7 +194,7 @@ export const roomDetails = {
       "Apartamento para não Fumantes",
       "Vista Lateral Mar"
     ],
-    reservationUrl: "https://book.omnibees.com/hotel/16875/room/99195?c=9190&q=16875&NRooms=1&CheckIn=21092025&CheckOut=22092025&ad=1&ch=0&lang=pt-BR&currencyId=16&version=4",
+    reservationUrl: "https://app.otabuilder.com/tinttohotel",
   },
   "suite": {
     name: "Suíte",
@@ -221,6 +221,6 @@ export const roomDetails = {
       "Banheiro privado",
       "Vista para a Cidade"
     ],
-    reservationUrl: "https://book.omnibees.com/hotel/16875/room/99196?c=9190&q=16875&NRooms=1&CheckIn=21092025&CheckOut=22092025&ad=1&ch=0&lang=pt-BR&currencyId=16&version=4",
+    reservationUrl: "https://app.otabuilder.com/tinttohotel",
   }
 }

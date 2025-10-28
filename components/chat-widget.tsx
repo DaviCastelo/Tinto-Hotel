@@ -43,37 +43,22 @@ export function ChatWidget() {
   ]
 
   const generateQuotationUrl = () => {
-    // URLs específicas para cada tipo de quarto
-    const roomUrls = {
-      'suite': 'https://book.omnibees.com/hotel/16875/room/99196?c=9190&q=16875',
-      'standard-triplo': 'https://book.omnibees.com/hotel/16875/room/102187?c=9190&q=16875',
-      'standard-duplo': 'https://book.omnibees.com/hotel/16875/room/99010?c=9190&q=16875',
-      'standard-triplo-casal': 'https://book.omnibees.com/hotel/16875/room/99195?c=9190&q=16875',
-      'vista-mar': 'https://book.omnibees.com/hotel/16875/room/99195?c=9190&q=16875'
+    // Usar o novo motor de reservas OTA Builder
+    const baseUrl = "https://app.otabuilder.com/tinttohotel"
+    
+    // Se há dados de cotação, adicionar parâmetros
+    if (quotationData.checkIn && quotationData.checkOut) {
+      const params = new URLSearchParams({
+        checkin: quotationData.checkIn,
+        checkout: quotationData.checkOut,
+        rooms: quotationData.rooms.toString(),
+        adults: quotationData.adults.toString(),
+        children: quotationData.children.toString()
+      })
+      return `${baseUrl}?${params.toString()}`
     }
     
-    // Se não há tipo de quarto selecionado, usar URL geral
-    const baseUrl = quotationData.roomType && roomUrls[quotationData.roomType as keyof typeof roomUrls] 
-      ? roomUrls[quotationData.roomType as keyof typeof roomUrls]
-      : "https://book.omnibees.com/hotel/16875?c=9190&q=16875"
-    
-    // Converter datas do formato YYYY-MM-DD para DDMMYYYY
-    const formatDateForUrl = (dateStr: string) => {
-      const [year, month, day] = dateStr.split('-')
-      return `${day}${month}${year}`
-    }
-    
-    const params = new URLSearchParams({
-      CheckIn: formatDateForUrl(quotationData.checkIn),
-      CheckOut: formatDateForUrl(quotationData.checkOut),
-      NRooms: quotationData.rooms.toString(),
-      ad: quotationData.adults.toString(),
-      ch: quotationData.children.toString(),
-      lang: 'pt-BR',
-      currencyId: '16',
-      version: '4'
-    })
-    return `${baseUrl}&${params.toString()}`
+    return baseUrl
   }
 
   const generateGoogleMapsUrl = () => {
