@@ -19,7 +19,7 @@ export function ChatWidgetSimple() {
       });
     }
     // Abrir WhatsApp
-    const phoneNumber = "558581493127"
+    const phoneNumber = "5585981600354"
     const message = "Olá! Gostaria de falar com o atendimento do TINTTO Hotel."
     const encodedMessage = encodeURIComponent(message)
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank')

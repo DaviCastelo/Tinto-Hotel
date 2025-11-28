@@ -56,7 +56,7 @@ export default function QuartosPage() {
               <Link href="/contato">Falar com Especialista</Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="rounded-full bg-transparent">
-              <Link href="tel:+5511999999999">Ligar Agora</Link>
+              <Link href="tel:+5585981600354">Ligar Agora</Link>
             </Button>
           </div>
         </div>

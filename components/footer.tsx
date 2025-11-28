@@ -92,22 +92,22 @@ export function Footer() {
                 <div className="flex items-center space-x-3">
                   <MessageCircle size={20} className="text-sienna" />
                   <Link 
-                    href="https://wa.me/5585981493127" 
+                    href="https://wa.me/5585981600354" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     onClick={handleWhatsAppClick}
                     className="text-sienna hover:text-amber-700 transition-colors cursor-pointer"
                   >
-                    Central de Reservas WhatsApp:<br />(85) 98149-3127
+                    Central de Reservas WhatsApp:<br />(85) 98160-0354
                   </Link>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone size={20} className="text-sienna" />
-                  <span className="text-sienna">Central de Reservas: (85) 3085-5168</span>
+                  <span className="text-sienna">Central de Reservas: (85) 98160-0354</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone size={20} className="text-sienna" />
-                  <span className="text-sienna">Recepção: (85) 3085-5168</span>
+                  <span className="text-sienna">Recepção: (85) 98160-0354</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail size={20} className="text-sienna" />
